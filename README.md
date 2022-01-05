@@ -39,11 +39,11 @@ What things you need to install the software and how to install them
 Create virtual environment: virtualenv myenv
 
 ```
-myenv\scripts\activate
+    myenv\scripts\activate
 ```
 
 ```
-pip install -r requirements.txt
+    pip install -r requirements.txt
 ```
 
 ```
