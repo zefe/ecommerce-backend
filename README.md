@@ -8,6 +8,11 @@ API application using Django
 
 ![iShop web app home](https://github.com/zefe/ecommerce-frontend/blob/main/src/assets/images/home.png)
 
+
+## DB Diagram
+
+![iShop web app home](https://github.com/zefe/ecommerce-backend/blob/main/static/images/ecommerce-api-sql.png)
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
