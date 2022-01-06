@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 
     'rest_framework',
     'corsheaders',
+    'storages',
 
     'base.apps.BaseConfig',
 ]
@@ -184,3 +185,11 @@ MEDIA_ROOT = BASE_DIR / 'static/images'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOW_ALL_ORIGINS = True
+
+AWS_QUERYSTRING_AUTH = False
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+AWS_ACCESS_KEY_ID = 'AKIAVEBD76KZ3W3FREVF'
+AWS_SECRET_ACCESS_KEY = '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'
+
+AWS_STORAGE_BUCKET_NAME = 'ishop-bucket-demo'
