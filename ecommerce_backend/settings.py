@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
-
+import os
 from pathlib import Path
 from datetime import timedelta
 
@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-)wajwvy@$m-n4_fu7gltokprnv@=5u*m+e@^ixt&-6d@1#-o#$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'ishop-demo.herokuapp.com/']
 
 
 # Application definition
@@ -124,8 +124,14 @@ WSGI_APPLICATION = 'ecommerce_backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'ishop',
+        'USER': 'zefe',
+        #'PASSWORD': os.environ.get('DB_PASS'),
+        'PASSWORD': 'postgres',
+        'HOST': 'ishop-identifier.cxqyxyaaejek.us-east-1.rds.amazonaws.com',
+        'PORT': '5432',
+
     }
 }
 
