@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-)wajwvy@$m-n4_fu7gltokprnv@=5u*m+e@^ixt&-6d@1#-o#$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'ishop-demo.herokuapp.com/']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -127,7 +127,6 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'ishop',
         'USER': 'zefe',
-        #'PASSWORD': os.environ.get('DB_PASS'),
         'PASSWORD': 'postgres',
         'HOST': 'ishop-identifier.cxqyxyaaejek.us-east-1.rds.amazonaws.com',
         'PORT': '5432',
