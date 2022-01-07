@@ -129,8 +129,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'ishop',
         'USER': 'zefe',
-        'PASSWORD': 'postgres',
-        'HOST': 'ishop-identifier.cxqyxyaaejek.us-east-1.rds.amazonaws.com',
+        'PASSWORD': os.environ.get('DB_PASS'),
+        'HOST': os.environ.get('DB_HOST'),
         'PORT': '5432',
 
     }
@@ -192,7 +192,7 @@ CORS_ALLOW_ALL_ORIGINS = True
 AWS_QUERYSTRING_AUTH = False
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
-AWS_ACCESS_KEY_ID = 'AKIAVEBD76KZ3W3FREVF'
-AWS_SECRET_ACCESS_KEY = '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'
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 
-AWS_STORAGE_BUCKET_NAME = 'ishop-bucket-demo'
+AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
